@@ -1,0 +1,43 @@
+Ttorial de configuração:
+
+MAVEN:
+1 - Baixar a versão mais nova do MAVEN no site: https://maven.apache.org/install.html 
+2 - Descompactar e colocar em: C:\Program Files
+3 - Configurar as variáveis de ambiente: [H2_HOME, MAVEN_HOME] = C:\Program Files\apache-maven-x.x.x
+4 - Acrescentar ao Path: C:\Program Files\apache-maven-3.3.9
+5 - Testar com o comando: mvn -v
+6 - Ir ate o diretório onde o projeto será criado e executar o comando:
+	mvn archetype:generate -DgroupId=br.com.fabricadeprogramador -DartifactId=fabricaweb -DarchetypeArtifactId=maven-archetype-quickstart -DinterativeMode=false
+	
+Pronto, projeto criado com sucesso!
+
+
+Configuração do POM.xml (https://maven.apache.org/pom.html):
+1 - Alterar a tag <packaging>jar</packaging> para <packaging>war</packaging> pois é uma aplicação web.
+2 - Criar a tag de build:
+	<build>
+		<finalName>
+			fabricaweb
+		</finalName>
+		<plugins>
+			<plugin>
+			  <artifactId>maven-compiler-plugin</artifactId>
+			  <configuration>
+				<source>1.8</source>
+				<target>1.8</target>
+			  </configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+3 - Update project no eclipse
+
+Configração do TOMCAT:
+1 - Baixe o Tomcat zip na versão 8.0 e coloque em um diretorio a sua escolha 
+1 - Add um server no eclipse, selecione a versão 8 do Tomcat
+2 - Em browser defina o local onde você colocou o Tomcat
+3 - Agora que o server está configurado, start o server.
+4 - Crie um index.html em src/main/webapp
+5 - Teste a pagina: localhost:8080/fabricaweb
+
+Pronto, Tomcat configurado!

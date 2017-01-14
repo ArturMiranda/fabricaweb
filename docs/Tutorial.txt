@@ -41,3 +41,11 @@ Configração do TOMCAT:
 5 - Teste a pagina: localhost:8080/fabricaweb
 
 Pronto, Tomcat configurado!
+
+GIT:
+1 - Baixar e instalar o git
+2 - Ir até o diretório do projeto e iniciar o Git: >> git init 
+3 - Usar os comandos gits para sincronizar os relatorios
+
+POM.XML:
+1 - Atualizando o Pom.xml com a dependência do banco de dados. Bscar a configurção de dependência em: https://mvnrepository.com/

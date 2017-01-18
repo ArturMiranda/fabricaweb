@@ -43,9 +43,27 @@ Configração do TOMCAT:
 Pronto, Tomcat configurado!
 
 GIT:
-1 - Baixar e instalar o git
+1 - Baixar e instalar o git (https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git). 
 2 - Ir até o diretório do projeto e iniciar o Git: >> git init 
 3 - Usar os comandos gits para sincronizar os relatorios
-
+	3.1 - git status -> para verificar os arquivos que foram alterados
+	3.2 - git add (expressão regular) -> para add os arquivos no commit
+	3.3 - git commit -m "mensagem de commit" -> para fazer o commit no repositorio local
+	3.4 - git push origin master -> para enviar a alterções para repositorio github
+	
+	
 POM.XML:
-1 - Atualizando o Pom.xml com a dependência do banco de dados. Bscar a configurção de dependência em: https://mvnrepository.com/
+1 - Ao criar uma consexao com o B.D. devemos atualizar o Pom.xml com a dependência do banco de dados. Buscar a configurção de dependência em: https://mvnrepository.com/
+	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>6.0.5</version>
+	</dependency>
+2 - Ao criar os controladores devemos atualizar o Pom.xml com as dependências dos servlets
+	<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>4.0.0-b01</version>
+	</dependency>
